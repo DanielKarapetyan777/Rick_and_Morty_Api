@@ -21,6 +21,8 @@ class CharacterRepo {
 class CharacterInfo {
   final url = 'https://rickandmortyapi.com/api/character';
 
+  CharacterInfo({result, id});
+
   Future<Character> getCharacter(int id) async {
     Dio dio = Dio();
     try {

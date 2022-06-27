@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_5/ui/pages/home_page.dart';
-import 'package:flutter_application_5/ui/widgets/character_info.dart';
+import 'package:flutter_application_5/ui/pages/character_info.dart';
 
 void main(List<String> args) => runApp(const MyApp());
 
@@ -18,7 +18,9 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => HomePage(),
-        '/details': (context) => const CharacterInfo(),
+        '/details': (context) => const CharacterInfo(
+              id: null,
+            ),
       },
     );
   }

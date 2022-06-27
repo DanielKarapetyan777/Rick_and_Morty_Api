@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_application_5/data/models/character.dart';
 import 'package:flutter_application_5/data/repositorias/character_repo.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_5/ui/pages/character_info.dart';
 
 import '../../data/models/character.dart';
 
@@ -46,8 +47,18 @@ class CharacterList extends StatelessWidget {
                   alignment: Alignment.topLeft,
                   child: TextButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, '/details',
-                          arguments: result.id);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => CharacterInfo(
+                                  id: result.id,
+                                  name: result.name,
+                                  gender: result.gender,
+                                  image: result.image,
+                                  species: result.species,
+                                  status: result.status,
+                                )),
+                      );
                     },
                     child: Text(
                       result.name,
@@ -66,4 +77,9 @@ class CharacterList extends StatelessWidget {
       ),
     );
   }
+}
+
+class Id {
+  int id;
+  Id({required this.id});
 }

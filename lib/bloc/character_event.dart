@@ -7,6 +7,6 @@ class CharacterEvent with _$CharacterEvent {
     required String name,
   }) = CharacterEventFetch;
   const factory CharacterEvent.info({
-    required Object? id,
+    required Object id,
   }) = CharacterEventInfo;
 }
